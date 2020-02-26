@@ -1,18 +1,30 @@
 const get_cookie = require('./module/get-cookie');
 const get_info = require('./module/get-info');
+let waitTime = (time)=>{
+	return new Promise(resolve=>{
+		setTimeout(function(){
+			return resolve(time);
+		},time)
+	})
+};
 let scan = async (cookie)=>{
 
+	try{
+		let find_data_status_false = await Data.find({status:false}).limit(1);
+		if(find_data_status_false.length === 0) {
+			await Status.update({status:true}).set({status:false});
+			return true;
+		};
+		let {code} = find_data_status_false[0];
+		let info = await get_info(code,cookie);
+		
+		await Data.update({code}).set({...info,status:true});
+		return await scan(cookie);
+	}catch(e){
+		await waitTime(5000);
+		return await scan(cookie);
+	}
 	
-	let find_data_status_false = await Data.find({status:false}).limit(1);
-	if(find_data_status_false.length === 0) {
-		await Status.update({status:true}).set({status:false});
-		return true;
-	};
-	let {code} = find_data_status_false[0];
-    let info = await get_info(code,cookie);
-    console.log(info);
-	await Data.update({code}).set({...info,status:true});
-	return await scan(cookie);
 	
 };
 module.exports = async ()=>{
