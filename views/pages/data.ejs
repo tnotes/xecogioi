@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+  <HEAD>
+    <title>Thông tin ph&#432;&#417;ng ti&#7879;n</title>
+<meta name=GENERATOR content="Microsoft Visual Studio .NET 7.1">
+<meta content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<style type=text/css>.style1 {
+  FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+</style>
+
+<meta name=CODE_LANGUAGE content=C#>
+<meta name=vs_defaultClientScript content=JavaScript>
+<meta name=vs_targetSchema content=http://schemas.microsoft.com/intellisense/ie5>
+  </HEAD>
+<body onload="document.expando=true;" onmousedown="c1c_doc_onmousedown(event);" onmouseup="c1c_doc_onmouseup(event);"  leftMargin=0 topMargin=0 MS_POSITIONING="GridLayout">
+<form method="post" action="./ThongTinPT.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ5NTczMDU2Mg9kFgICAQ9kFgQCAw8PFgIeB1Zpc2libGVoZBYCAgEPDxYCHgRUZXh0BQs0M0EtMTMzLjI3VGRkAgQPDxYCHwBnZBYsAgEPDxYCHwEFOFRIw5RORyBUSU4gUEjGr8agTkcgVEnhu4ZOIEJJ4buCTiDEkMSCTkcgS8OdOjQzQS0xMzMuMjdUZGQCBQ8PFgIfAQUKw5QgdMO0IGNvbmRkAgcPDxYCHwEFBEZPUkRkZAIJDw8WAh8BBQpXTEFUNTk0MTc0ZGQCCw8PFgIfAQURUkwwNVNVSE1NUjVHMDA0OThkZAINDw8WAh8BBRFMw6ogxJDhu6ljIE5o4bqtdGRkAg8PDxYCHwEFMDIxOSDDlG5nIMOtY2ggS2hpw6ptLEjhuqNpIENow6J1LCBUUCDEkMOgIE7hurVuZ2RkAhMPDxYCHwEFBzE4MTIga2dkZAIVDw8WAh8BBQMga2dkZAIXDw8WAh8BBSdT4buRIG5nxrDhu51pIGNobyBwaMOpcCBjaOG7nyAobmfhu5NpKTpkZAIZDw8WAh8BBQo3IG5nxrDhu51pZGQCGw8PFgIfAQUHMjUwNyBrZ2RkAh0PDxYCHwEFBktow7RuZ2RkAh8PDxYCHwEFAyBrZ2RkAiEPDxYCHwEFBktow7RuZ2RkAiMPDxYCHwEFBktow7RuZ2RkAiUPDxYCHwEFAzR4MmRkAicPDxYCHwEFCTE0OTAvMTQ3NWRkAikPDxYCHwEFETQ5NTZ4MTgwN3gxODMzIG1tZGQCLQ8PFgIfAQUHMjg2MCBtbWRkAi8PDxYCHwEFEzI2NS83MFIxNTsyNjUvNzBSMTVkZAIzDzwrAAsBAA8WCB4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnQCAR4JUGFnZUNvdW50AgEeFV8hRGF0YVNvdXJjZUl0ZW1Db3VudAIBZBYCZg9kFgICAQ9kFghmDw8WAh8BBQU0MzAxU2RkAgEPDxYCHwEFCjMxLzA3LzIwMTlkZAICDw8WAh8BBQpLQy04ODYzMzkzZGQCAw8PFgIfAQUKMzAvMDEvMjAyMGRkZJHeYBomduQjiK+QW5R6GPPbk80GgCI6CbGXP80PWgjW" />
+</div>
+
+
+<script language="javascript" type="text/javascript" src="/c1webcommand_client/v1_0/c1menu.js"></script>
+<div class="aspNetHidden">
+
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="53DB23EF" />
+</div>
+<table border=0 width="100%" align=center>
+  <tr>
+    <th scope=col><IMG alt=banner src="http://www.vr.org.vn/ptpublicweb/images/banner1.jpg" width="100%" height=128 ></TH></TR>
+ 
+  <tr>
+    <th scope=col><width="100%" 
+  ></TH></TR></TABLE><div id="panResult" style="height:682px;width:100%;Z-INDEX: 0">
+  
+<DIV class=style1 align=center>
+<span id="LblBinDangKy" style="display:inline-block;color:#C000C0;font-family:Tahoma;font-size:Medium;font-weight:bold;width:80%;">THÔNG TIN PHƯƠNG TIỆN BIỂN ĐĂNG KÝ: <%= data.code %></span>&nbsp; 
+</DIV>
+<P class=style2 align=center>
+  <% if(data.status){ %>
+
+<span id="Label3" style="color:MediumVioletRed;font-size:Medium;font-weight:bold;">THÔNG TIN CHUNG</span></P>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD style="HEIGHT: 21px" width="47%">Lo&#7841;i&nbsp;ph&#432;&#417;ng ti&#7879;n: 
+<span id="txtLoaiPT" style="display:inline-block;color:Blue;font-weight:bold;width:35%;"><%= data.loai_phuong_tien %></span>
+    <TD style="HEIGHT: 21px" width="48%">&nbsp;Nhãn hi&#7879;u: 
+<span id="txtNhanHieu" style="display:inline-block;color:Blue;font-weight:bold;height:20px;width:40%;Z-INDEX: 0"><%= data.nhan_hieu %></span></TD></TR></TABLE>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD style="HEIGHT: 21px" width="47%">S&#7889; máy th&#7921;c t&#7871;: 
+<span id="txtSoMay" style="display:inline-block;color:Blue;font-weight:bold;width:35%;"><%= data.so_may_thuc_te %></span></TD>
+    <TD style="HEIGHT: 21px" width="48%">S&#7889; khung th&#7921;c t&#7871;: 
+<span id="txtSoKhung" style="display:inline-block;color:Blue;font-weight:bold;width:40%;"><%= data.so_khung_thuc_te %></span></TD></TR></TABLE>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD style="HEIGHT: 21px">Ch&#7911; ph&#432;&#417;ng ti&#7879;n: 
+<span id="txtChuPT" style="display:inline-block;color:Blue;font-weight:bold;width:60%;"><%= data.chu_phuong_tien %></span></TD></TR>
+  <TR>
+    <TD style="HEIGHT: 21px">&#272;&#7883;a ch&#7881; ch&#7911; ph&#432;&#417;ng ti&#7879;n: 
+<span id="txtDiaChi" style="display:inline-block;color:Blue;font-weight:bold;width:60%;Z-INDEX: 0"><%= data.dia_chi_chu_phuong_tien %></span></TD></TR></TABLE>
+<P class=style2 align=center>
+<span id="Label21" style="color:MediumVioletRed;font-size:Medium;font-weight:bold;Z-INDEX: 0">THÔNG S&#7888; K&#7928; THU&#7852;T</span></P>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD style="HEIGHT: 21px" width="47%">Kh&#7889;i&nbsp;l&#432;&#7907;ng b&#7843;n thân: 
+<span id="txtTuTrongTK" style="display:inline-block;color:Blue;font-weight:bold;width:40%;Z-INDEX: 0"><%= data.khoi_luong_ban_than %></span></TD>
+    <TD style="HEIGHT: 21px" width="48%">Kh&#7889;i l&#432;&#7907;ng hàng hóa chuy&#7875;n ch&#7903; cho 
+      phép TGGT: 
+<span id="txtTaiTrongGT" style="display:inline-block;color:Blue;font-weight:bold;width:128px;"><%= data.khoi_luong_hang_hoa_chuyen_cho_cho_phep_TGGT %></span></TD></TR>
+  <TR>
+    <TD>
+<span id="LblSoCho" style="display:inline-block;color:Black;width:300px;">Số người cho phép chở (ngồi):</span>
+<span id="txtSoCho" style="display:inline-block;color:Blue;font-weight:bold;width:75px;Z-INDEX: 0"><%= data.so_nguoi_cho_phep_tro %></span></TD>
+    <TD>Kh&#7889;i l&#432;&#7907;ng toàn b&#7897; cho phép tham gia giao thông: 
+<span id="txtTrLgToanBoGT" style="display:inline-block;color:Blue;font-weight:bold;width:128px;"><%= data.khoi_luong_toan_bo_cho_phep_tham_gia_giao_thong %></span></TD></TR>
+  <TR>
+    <TD>Kinh doanh v&#7853;n t&#7843;i: 
+<span id="txtKDVT" style="display:inline-block;color:Blue;font-weight:bold;width:144px;"><%= data.kinh_doanh_van_tai %></span></TD>
+    <TD>Kh&#7889;i l&#432;&#7907;ng kéo theo cho phép: 
+<span id="txtTrLgMoocCP" style="display:inline-block;color:Blue;font-weight:bold;width:144px;"><%= data.khoi_luog_keo_theo_cho_phep %></span></TD></TR></TABLE>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD width="47%">L&#7855;p &#273;&#7863;t thi&#7871;t b&#7883; GSHT: 
+<span id="txtTB_GSHT" style="display:inline-block;color:Blue;font-weight:bold;width:144px;"><%= data.lap_dat_thiet_bi_GSHT %></span></TD>
+    <TD width="48%">Ph&#432;&#417;ng ti&#7879;n c&#7843;i t&#7841;o: 
+<span id="txtCaiTao" style="display:inline-block;color:Blue;font-weight:bold;width:144px;"><%= data.phuong_tien_cai_tao %></span></TD></TR></TABLE>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD width="47%">Công th&#7913;c bánh xe: 
+<span id="txtCTBanhXe" style="display:inline-block;color:Blue;font-weight:bold;width:35%;Z-INDEX: 0"><%= data.cong_thuc_banh_xe %></span></TD>
+    <TD width="48%">V&#7871;t bánh xe: 
+<span id="txtVetBanhXe" style="display:inline-block;color:Blue;font-weight:bold;width:40%;Z-INDEX: 0"><%= data.vet_banh_xe %></span></TD></TR></TABLE>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD width="47%">Kích th&#432;&#7899;c bao(DxRxC): 
+<span id="txtKichThuocBao" style="display:inline-block;color:Blue;font-weight:bold;width:192px;Z-INDEX: 0"><%= data.kich_thuoc_bao %></span></TD>
+    <TD width="48%">Kích th&#432;&#7899;c thùng hàng (DxRxC): 
+<span id="txtKichThuocThung" style="display:inline-block;color:Blue;font-weight:bold;width:40%;Z-INDEX: 0"><%= data.kich_thuoc_thung_hang %></span></TD></TR></TABLE>
+<TABLE border=0 width="95%" align=center></TABLE>
+<TABLE border=0 width="95%" align=center></TABLE>
+<TABLE border=0 width="95%" align=center></TABLE>
+<TABLE border=0 width="95%" align=center>
+  <TR>
+    <TD width="47%">Chi&#7873;u dài c&#417; s&#7903;: 
+<span id="txtChieuDaiCoSo" style="display:inline-block;color:Blue;font-weight:bold;width:312px;Z-INDEX: 0"><%= data.chieu_dai_co_so %></span></TD>
+    <TD width="48%">C&#7905; l&#7889;p: 
+<span id="txtCoLop" style="display:inline-block;color:Blue;font-weight:bold;width:352px;Z-INDEX: 0"><%= data.co_lop %></span></TD></TR></TABLE>
+<P class=style2 align=center>
+<span id="Label34" style="color:MediumVioletRed;font-size:Medium;font-weight:bold;Z-INDEX: 0"> L&#7846;N CU&#7888;I  KI&#7874;M &#272;&#7882;NH &#272;Ã TH&#7920;C HI&#7878;N </span></P>
+<P class=style2 align=center>
+<table cellspacing="0" rules="all" border="1" id="DGKiemDinh" style="height:16px;width:95%;border-collapse:collapse;Z-INDEX: 0">
+    <tr align="center" valign="middle" style="color:#F7F7F7;background-color:#4A3C8C;font-family:Arial;font-size:Medium;font-weight:bold;">
+      <td style="font-size:Small;width:15%;">Đơn vị kiểm định</td><td style="font-size:Small;width:15%;">Ngày KĐ</td><td style="font-size:Small;width:20%;">Số tem GCN</td><td style="font-size:Small;width:20%;">Thời hạn KĐ</td>
+      <% for(var i = 0;i<data.lan_cuoi_kiem_dinh_da_thuc_hien.length;i++){%>
+    </tr><tr style="color:#4A3C8C;background-color:#E7E7FF;font-family:Arial;font-size:Medium;">
+      <td align="center" style="font-size:Small;"><%= data.lan_cuoi_kiem_dinh_da_thuc_hien[i].don_vi_kiem_dinh%></td><td align="right" style="font-size:Small;"><%= data.lan_cuoi_kiem_dinh_da_thuc_hien[i].ngay_KD%></td><td align="right" style="font-size:Small;"><%= data.lan_cuoi_kiem_dinh_da_thuc_hien[i].so_tem_GCN%></td><td align="right" style="font-size:Small;"><%= data.lan_cuoi_kiem_dinh_da_thuc_hien[i].thoi_han_KD%></td>
+    </tr>
+    <%}%>
+  </table>
+ <%}else if(!data.status && data.code){%></P>
+ <center><i>Đang quét biển số này.Vui lòng quay lại sau ít phút nữa.</i></center>
+
+  <%}else if(!data.status && !data.code){%></P>
+ <center><i style="color:red">Biển số này chưa có trong hệ thống.Vui lòng thực hiện upload lại.</i></center>
+ <%}%>
+</div></form>
+
+  </body>
+</HTML>
