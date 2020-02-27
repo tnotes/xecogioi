@@ -58,7 +58,7 @@ module.exports = {
 				let find_code = await Data.find({code});
 				if(find_code.length > 0){
 					let {code,lan_cuoi_kiem_dinh_da_thuc_hien} = find_code[0];
-					let {don_vi_kiem_dinh,ngay_KD,so_tem_GCN,thoi_han_KD} = lan_cuoi_kiem_dinh_da_thuc_hien[0];
+					let {don_vi_kiem_dinh,ngay_KD,so_tem_GCN,thoi_han_KD} = lan_cuoi_kiem_dinh_da_thuc_hien[0] || {};
 					worksheet.addRow({code,don_vi_kiem_dinh:don_vi_kiem_dinh || '',ngay_KD:ngay_KD || '',so_tem_GCN:so_tem_GCN || '',thoi_han_KD:thoi_han_KD || ''});
 
 				}
