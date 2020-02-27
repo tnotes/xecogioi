@@ -49,10 +49,7 @@ module.exports = {
 
 			];
 			
-			
-
-
-			for(let code of list_code){
+			let add_code = async (code){
 				code = code.replace(/(\r\n|\n|\r)/gm, "").trim();
 				let find_code = await Data.find({code});
 				if(find_code.length > 0){
@@ -61,7 +58,23 @@ module.exports = {
 					worksheet.addRow({code,don_vi_kiem_dinh,ngay_KD,so_tem_GCN,thoi_han_KD});
 
 				}
+				return true;
+			};
+			let length_bks = list_code.length;
+
+			for(let i = 0;i<=length_bks;i+=100){
+				let max_default = i+100;
+				if(length_bks > max_default){
+					let scan_map = list_code.slice(i,max_default).map(e=>add_code(e));
+					await Promise.all(scan_map);
+				}else{
+					let scan_map = list_code.slice(i,length_bks).map(e=>add_code(e));
+					await Promise.all(scan_map);
+					break;
+				}
+				
 			}
+			
 			workbook.xlsx.writeBuffer()
 			.then(function(buffer) {
 				res.setHeader('Content-disposition', 'attachment; filename=Thoi_gian_dang_kiem_gan_nhat.xlsx');
