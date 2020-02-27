@@ -49,7 +49,7 @@ module.exports = {
 
 			];
 			
-			let add_code = async (code){
+			let add_code = async (code)=>{
 				code = code.replace(/(\r\n|\n|\r)/gm, "").trim();
 				let find_code = await Data.find({code});
 				if(find_code.length > 0){
