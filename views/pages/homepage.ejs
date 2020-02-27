@@ -28,7 +28,7 @@
         <tr>
           <th scope=col><width="100%" 
             ></TH></TR></TABLE><div id="PanHeader" style="height:64px;width:100%;Z-INDEX: 0">
-              <a style="float: right" target="_blank" href="/data/backup">Download Backup</a>
+              
               <DIV class=style1 align=left><FONT size=4><FONT size=3><STRONG>Bi&#7875;n &#273;&#259;ng 
               ký</STRONG></FONT>:</FONT> 
               <input name="code" type="text" id="txtBienDK" style="width:95px;" />
@@ -37,9 +37,20 @@
               <DIV class=style1 align=left><I><FONT size=2><FONT 
                 color=red></FONT></FONT></I></DIV>
               </div></form>
+              <br>
+              <hr>
+              <br>
               <form action="/data/upload" enctype="multipart/form-data" method="post">
-                <b>Tải lên </b> <small>(Tải lên dưới dạng file .txt , Mỗi biển số 1 dòng)</small> <br> <br>
+                <b>Tải lên </b> <small>(Tải lên dưới dạng file .txt , Mỗi biển số 1 dòng) -> Nạp vào để quét</small> <br> <br>
                 <input type="file" name="avatar" multiple="multiple">
+                <input type="submit" value="Upload">
+              </form>
+              <br>
+              <hr>
+              <br>
+               <form action="/data/uploadFilter" enctype="multipart/form-data" method="post">
+                <b>Tải lên </b> <small>(Tải lên dưới dạng file .txt , Mỗi biển số 1 dòng) -> Danh sách lần cuối kiểm định đã thực hiện.</small> <br> <br>
+                <input type="file" name="codeFilter" multiple="multiple">
                 <input type="submit" value="Upload">
               </form>
 

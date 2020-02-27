@@ -9,6 +9,7 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "cheerio": "^1.0.0-rc.3",
+    "exceljs": "^3.8.0",
     "grunt": "1.0.4",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
