@@ -10,15 +10,13 @@ let waitTime = (time)=>{
 let scan = async (cookie)=>{
 
 	try{
-		let find_data_status_false = await Data.find({status:false}).limit(1);
+		let find_data_status_false = await Data.find({status:false}).limit(10);
 		if(find_data_status_false.length === 0) {
 			await Status.update({status:true}).set({status:false});
 			return true;
 		};
-		let {code} = find_data_status_false[0];
-		let info = await get_info(code,cookie);
-		
-		await Data.update({code}).set({...info,status:true});
+		let get_info_map = find_data_status_false.map(({code})=>get_info(code,cookie))
+	    await Promise.all(get_info_map)
 		return await scan(cookie);
 	}catch(e){
 		await waitTime(5000);

@@ -56,5 +56,7 @@ module.exports = async (code,cookie)=>{
 
 		lan_cuoi_kiem_dinh_da_thuc_hien.push({don_vi_kiem_dinh,ngay_KD,so_tem_GCN,thoi_han_KD})
 	})
-	return {loai_phuong_tien,so_may_thuc_te,chu_phuong_tien,dia_chi_chu_phuong_tien,nhan_hieu,so_khung_thuc_te,khoi_luong_ban_than,so_nguoi_cho_phep_tro,kinh_doanh_van_tai,lap_dat_thiet_bi_GSHT,cong_thuc_banh_xe,kich_thuoc_bao,chieu_dai_co_so,khoi_luong_hang_hoa_chuyen_cho_cho_phep_TGGT,khoi_luong_toan_bo_cho_phep_tham_gia_giao_thong,khoi_luog_keo_theo_cho_phep,phuong_tien_cai_tao,vet_banh_xe,kich_thuoc_thung_hang,co_lop,lan_cuoi_kiem_dinh_da_thuc_hien}
+	let info = {loai_phuong_tien,so_may_thuc_te,chu_phuong_tien,dia_chi_chu_phuong_tien,nhan_hieu,so_khung_thuc_te,khoi_luong_ban_than,so_nguoi_cho_phep_tro,kinh_doanh_van_tai,lap_dat_thiet_bi_GSHT,cong_thuc_banh_xe,kich_thuoc_bao,chieu_dai_co_so,khoi_luong_hang_hoa_chuyen_cho_cho_phep_TGGT,khoi_luong_toan_bo_cho_phep_tham_gia_giao_thong,khoi_luog_keo_theo_cho_phep,phuong_tien_cai_tao,vet_banh_xe,kich_thuoc_thung_hang,co_lop,lan_cuoi_kiem_dinh_da_thuc_hien};
+	return await Data.update({code}).set({...info,status:true});
+
 };
