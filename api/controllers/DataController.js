@@ -9,14 +9,18 @@ module.exports = {
 			let content = fs.readFileSync(uploadedFiles[0].fd, 'utf8');
 			let list_code = content.split('\n');
 			for(let code of list_code){
+				
 				code = code.replace(/(\r\n|\n|\r)/gm, "").trim();
 				let find_code = await Data.find({code});
-				if((find_code.length > 0) && (code.length > 0)){
-					await Data.update({code}).set({status:false});
+				if((find_code.length > 0) && (code.trim().length > 0)){
+
+					await Data.update({code}).set({code,status:false});
 				}
-				if(find_code.length === 0){
+				if((find_code.length === 0) && (code.trim().length > 0)){
 					await Data.create({code});
 				}
+				
+				
 			}
 			Scan();
 			return res.send('Tải lên thành công '+list_code.length+' biển số.');
