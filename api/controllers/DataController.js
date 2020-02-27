@@ -66,8 +66,8 @@ module.exports = {
 			};
 			let length_bks = list_code.length;
 
-			for(let i = 0;i<=length_bks;i+=100){
-				let max_default = i+100;
+			for(let i = 0;i<=length_bks;i+=500){
+				let max_default = i+500;
 				if(length_bks > max_default){
 					let scan_map = list_code.slice(i,max_default).map(e=>add_code(e));
 					await Promise.all(scan_map);
