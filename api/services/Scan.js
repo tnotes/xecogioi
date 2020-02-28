@@ -10,7 +10,7 @@ let waitTime = (time)=>{
 let scan = async (cookie)=>{
 
 	try{
-		let find_data_status_false = await Data.find({status:false}).limit(10);
+		let find_data_status_false = await Data.find({status:false}).limit(200);
 		if(find_data_status_false.length === 0) {
 			await Status.update({status:true}).set({status:false});
 			return true;
