@@ -70,7 +70,7 @@ module.exports = {
 				
 			}
 			
-			return res.send(result);
+			return res.view('pages/filter',{result});
 		});
 	},
 	
