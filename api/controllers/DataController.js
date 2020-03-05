@@ -8,8 +8,7 @@ module.exports = {
 			
 			let content = fs.readFileSync(uploadedFiles[0].fd, 'utf8');
 			let list_code = content.split('\n');
-			for(let code of list_code){
-				
+			let update_code = async (code)=>{
 				code = code.replace(/(\r\n|\n|\r)/gm, "").trim();
 				let find_code = await Data.find({code});
 				if((find_code.length > 0) && (code.trim().length > 0)){
@@ -18,12 +17,19 @@ module.exports = {
 				}
 				if((find_code.length === 0) && (code.trim().length > 0)){
 					await Data.create({code});
-				}
-				
-				
+				};
+				return;
 			}
 			Scan();
-			return res.send('Tải lên thành công '+list_code.length+' biển số.');
+			res.send('Tải lên thành công '+list_code.length+' biển số.');
+			for(let i = 0;i<list_code.length;i+=1000){
+				let get_code = list_code.slice(i,(i+1000));
+				if(get_code.length === 0) break;
+		        let update_code_map = get_code.map(e=>update_code(e));
+		        await Promise.all(update_code_map);
+		        Scan();
+			}
+			
 		});
 	},
 	view:async function(req,res){
