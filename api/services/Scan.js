@@ -20,6 +20,7 @@ let scan = async (cookie)=>{
 		return await scan(cookie);
 	}catch(e){
 		await waitTime(5000);
+		let cookie = await get_cookie();
 		return await scan(cookie);
 	}
 	
